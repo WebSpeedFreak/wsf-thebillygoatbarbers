@@ -1,0 +1,716 @@
+body {
+    background-color: #333333;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #1c1c1c;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    min-height: 50px;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+} 
+main {
+    background-color:#333333;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+.loading-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px; 
+    margin-left: -25px; 
+}
+
+.above-the-fold {
+    background-image: url(/img/andywardlephoto-0101-1200w.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Banner Overlay - Default */
+
+.banner-overlay {
+    font-family: Quicksand, Arial;
+    font-size: 24px;
+    font-weight: 400;
+    width: 480px; 
+    height: 428px; 
+    background: transparent;
+    margin: 0 auto; 
+}
+
+.banner-overlay .logo {
+    background-image: url(/img/banner-logo-white-480w.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 480px 428px; 
+    width: 480px; 
+    height: 428px; 
+}
+
+.banner-overlay .philosophy {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1em;
+    line-height: 1.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+    opacity: 0.7;
+}
+
+.banner-overlay .philosophy h1,
+.banner-overlay .philosophy p
+{
+    margin: 0;
+    padding: 0.25em;
+}
+
+.banner-overlay .philosophy h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Banner Overlay - Responsive */
+
+@media screen and (min-width: 768px) and (max-height: 480px) {
+    .banner-overlay {
+        font-size: 12px; 
+        width: 240px;
+        height: 214px;
+    }
+    .banner-overlay .logo {
+        background-size: 240px 214px;
+        width: 240px;
+        height: 214px;
+    }
+    .banner-overlay .philosophy {
+        width: 240px;
+        height: 214px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-height: 321px) {
+    .banner-overlay {
+        font-size: 12px; 
+        width: 240px;
+        height: 214px;
+    }
+    .banner-overlay .logo {
+        background-size: 240px 214px;
+        width: 240px;
+        height: 214px;
+    } 
+    .banner-overlay .philosophy {
+        width: 240px;
+        height: 214px;
+    }
+}
+
+@media screen and (max-width: 767px) and (max-height: 320px) {
+    .banner-overlay {
+        font-size: 8px; 
+        width: 160px; 
+        height: 143px;
+    }
+    .banner-overlay .logo {
+        background-size: 160px 143px;
+        width: 160px; 
+        height: 143px;
+    } 
+    .banner-overlay .philosophy {
+        width: 160px; 
+        height: 143px;
+    }
+}
+
+/* Bootstrap Carousel */
+
+.carousel-fade .carousel-inner > .item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 0;
+
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.carousel-fade .carousel-inner > .item:first-of-type {
+  position: relative;
+}
+.carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Social Media */
+.socialmedia {
+    font-size: 24px;
+    padding: 0 0.5em ;
+    text-align: center;
+}
+.socialmedia ul {
+    line-height: 2em;
+}
+.socialmedia li {
+    float: left;
+    height: 2em;
+    width: 2em; 
+}
+.socialmedia li a {
+    margin: 0 0.25em;
+    padding: 0 0.25em;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out; 
+}
+.socialmedia li a:hover {
+    background-color: #ffffff;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+.socialmedia a.fa {
+    color: #ffffff;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.5em;
+    vertical-align: middle;
+    -moz--box-shadow: 0px 0px 2px #ffffff;
+    -webkit-box-shadow: 0px 0px 2px #ffffff;
+    box-shadow: 0px 0px 2px #ffffff;
+}
+
+/* CSS flexbox - Justify icons evenly*/
+.socialmedia ul {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+.socialmedia li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+}
+
+/* Padding For Social Media Icons - To Keep Them Close Together */
+
+@media screen and (min-width: 480px) {
+    .socialmedia {
+        padding: 0 3em;
+    } 
+}
+
+@media screen and (min-width: 768px) {
+    .socialmedia {
+        padding: 0 4em;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    .socialmedia {
+        padding: 0 5em;
+    } 
+}
+
+/* Telephone */
+
+header .telephone {
+    color: #c5d8cc;
+    font-family: Kameron, Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding-top: 1em;
+    text-align: center;
+}
+.telephone p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove Left Padding To Allow Number To Fit On XXS Width Screen */
+.col-xxs-3.full-width  {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    header .telephone {
+        font-size: 12px;
+        padding-top: 1.5em;
+    } 
+} 
+
+@media screen and (max-width: 480px) {
+    header .telephone {
+        font-size: 10px;
+        padding-top: 2em;
+    } 
+} 
+
+/* Navigation */
+
+.navbar-default {
+    background-color: #1c1c1c;
+    height: 90px;
+    min-height: 90px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-fixed-top {
+    border-width: 0;
+}
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+}
+.nav-top-row {
+    padding: 0.25em 0 0.5em 0;
+}
+.nav {
+    background-color: #1c1c1c;
+    font-size: 16px;
+    line-height: 1em;
+    text-align:center;
+}
+.nav li {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1em;
+}
+.nav a {
+    color: #e7e7e7;
+    font-family: Kameron, Arial;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.25em;
+    padding: 0 0.5em;
+}
+.nav a:hover {
+    background-color: #e7e7e7;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .nav-top-row {
+        padding: 0.25em 0 0.75em 0;
+    }
+    .nav {
+        font-size: 12px;
+    }
+}
+
+.header-height {
+    margin-top: 90px;
+}
+
+/* Prices */
+
+#prices {
+    background-color: #f0f0f0; 
+    color: #333333;
+    -moz-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -webkit-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    font-family: Quicksand, Arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    #prices  {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #prices  {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+}
+
+.prices-portrait .logo {
+    padding-bottom: 1em;
+}
+.prices-landscape .logo {
+    padding: 1em 0;
+}
+
+.prices h1 {
+    font-family: Kameron, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+}
+
+.prices ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.prices ul li {
+    font-weight: 700;
+    line-height: 2em;
+    text-align: left;
+    margin-left: 2em;
+}
+
+.prices ul li:before {    
+    font-family: 'FontAwesome';
+    content: '\f061';
+    margin: 0 0.5em 0 -2em;
+    padding-right: 0.5em;
+    color: rgb(255, 195, 112);
+}
+
+/* Booksy */
+
+.booksy-widget-container, .go-to-our-site-container {
+    font-family: Quicksand, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 2em;
+    padding: 1em 0 0 0;
+    text-align: center;
+}
+
+.booksy-widget-button, .go-to-our-site-button {
+    background-color: #26cbc5;
+    color: #333333;
+    border: 2px #a9a9a9 solid;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    -moz-transition: all .25s;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+}
+
+.booksy-widget-button:hover, .go-to-our-site-button:hover {
+    background-color: #00cc00;
+}
+
+/* Opening Hours */
+
+#hours {
+    background-color: #313233;
+    color: #cccccc; 
+    font-family: Quicksand, Arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    #hours  {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #hours  {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+}
+
+.hours-portrait .logo {
+    padding-bottom: 1em;
+}
+.hours-landscape .logo {
+    padding: 1em 0;
+}
+
+.hours h1 {
+    font-family: Kameron, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+}
+
+.hours ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.hours ul li {
+    line-height: 2em;
+}
+
+.walk-ins hr {
+    margin: 1em;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.walk-ins p {
+    line-height: 2em;
+}
+
+/* Page Not Found */
+
+#page-not-found {
+    background-color: #f0f0f0; 
+    color: #333333;
+    -moz-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -webkit-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    font-family: Quicksand, Arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    #page-not-found  {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #page-not-found  {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+}
+
+.page-not-found-portrait .logo {
+    padding-bottom: 1em;
+}
+.page-not-found-landscape .logo {
+    padding: 0 0 1em 0;
+}
+
+.company-name h1 {
+    font-family: Kameron, Arial;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 768px) {
+    .company-name h1  {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .company-name h1  {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}
+
+.page-not-found h1 {
+    font-family: Kameron, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+}
+
+.page-not-found p {
+    font-family: Quicksand, Arial;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.page-not-found ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.page-not-found ul li {
+    font-weight: 700;
+    line-height: 2em;
+    text-align: left;
+    margin-left: 2em;
+
+}
+
+.page-not-found ul li:before {    
+    font-family: 'FontAwesome';
+    content: '\f061';
+    margin: 0 0.5em 0 -2em;
+    padding-right: 0.5em;
+    color: rgb(255, 195, 112);
+}
+
+/* General Media Queries */
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .prices, .booksy, .hours, .walk-ins, .page-not-found, .go-to-our-site {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) and (orientation: portrait) {
+    .prices, .booksy, .hours, .walk-ins, .page-not-found, .go-to-our-site {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+    .prices, .booksy, .page-not-found, .go-to-our-site {
+        font-size: 12px;
+    }
+    .prices h2 {
+        font-size: 12px;
+    }
+    .hours, .walk-ins {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins, .page-not-found, .go-to-our-site {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 375px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins, .page-not-found, .go-to-our-site {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 320px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins, .page-not-found, .go-to-our-site {
+        font-size: 12px;
+    }
+    .prices h2 {
+        font-size: 12px;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: #222222;
+    color: #e7e7e7;
+    font-family: Quicksand, Arial;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2em;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    footer {
+        font-size: 10px;
+        line-height: 2em;
+    } 
+} 
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    footer {
+        font-size: 10px;
+        line-height: 2em;
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-height: 376px) {
+    footer {
+        font-size: 10px;
+        line-height: 2em;
+    } 
+}
+
+@media screen and (min-width: 768px) and (min-height: 768px) {
+    footer {
+        font-size: 16px;
+        line-height: 2em;
+    } 
+}
+
+/* Hide & Reveal Stuff */
+
+.hide {
+    display: none;
+}
+.noshow {
+    opacity: 0;
+}
+.reveal {
+    opacity: 1;
+    -moz-transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}

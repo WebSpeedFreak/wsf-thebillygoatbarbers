@@ -1,0 +1,23 @@
+/index.html
+strict-transport-security: max-age=600
+Access-Control-Allow-Origin "*"
+x-content-type-options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+
+/css/bootstrap/*
+# Bootstrap CSS Cache - 28 Days
+Cache-Control: public, max-age=2419200
+access-control-allow-origin: *
+/css/booksy/*
+# Booksy CSS Cache - 28 Days
+Cache-Control: public, max-age=2419200
+access-control-allow-origin: *
+/img/*
+# Images Cache - 28 Days
+Cache-Control: public, max-age=2419200
+access-control-allow-origin: *
+/*.ico
+# Icon Cache - 28 Days
+Cache-Control: public, max-age=2419200
+access-control-allow-origin: *
