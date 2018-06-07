@@ -1,6 +1,5 @@
 /index.html
 strict-transport-security: max-age=600
-Access-Control-Allow-Origin "*"
 x-content-type-options: nosniff
 X-XSS-Protection: 1; mode=block
 X-Frame-Options: SAMEORIGIN
