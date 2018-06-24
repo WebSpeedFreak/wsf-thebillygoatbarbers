@@ -1,0 +1,332 @@
+/* 24/06/18 - Version 2.0 */
+
+html, body, section {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #333333;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #1c1c1c;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+} 
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+h1:hover, p:hover, ul:hover, li:hover {
+    cursor: default;
+}
+
+/* Header */
+
+.company-name h1 {
+    font-family: Kameron, Arial;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color:#333333;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#page-not-found {
+    height: 100%;
+    height: calc(100vh - 100px);
+}
+
+#page-not-found {
+    background-color: #f0f0f0; 
+    color: #333333;
+    -webkit-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -moz-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -ms-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -o-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    font-family: Quicksand, Arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.page-not-found-portrait .logo {
+    padding-bottom: 1em;
+}
+
+.page-not-found h1 {
+    font-family: Kameron, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+}
+
+.page-not-found p {
+    font-family: Quicksand, Arial;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.page-not-found ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.page-not-found ul li {
+    font-weight: 700;
+    line-height: 2em;
+    text-align: left;
+}
+
+.page-not-found ul li svg {
+    height: 1em;
+    width: 1.5em;
+    fill: rgb(255, 195, 112);
+} 
+
+/* Go To Our Site */
+
+.go-to-our-site-container {
+    font-family: Quicksand, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 2em;
+    padding: 1em 0 0 0;
+    text-align: center;
+}
+
+.go-to-our-site-button {
+    background-color: #26cbc5;
+    color: #333333;
+    border: 2px #a9a9a9 solid;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+
+.go-to-our-site-button:hover {
+    background-color: #00cc00;
+}
+
+/* Default Is Portrait View */
+.page-not-found-landscape {
+    display: none;
+}
+
+/* Centre For All Devices */
+.vertical-centre {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Footer */
+
+footer {
+    background-color: #222222;
+    color: #e7e7e7;
+    font-family: Quicksand, Arial;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2em;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Responsive Font Sizes */
+
+@media screen and (min-width: 1024px) and (min-height: 1024px) {
+    .page-not-found, .go-to-our-site {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    .page-not-found, .go-to-our-site {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 240px) and (orientation: portrait),
+        screen and (max-height: 240px) and (orientation: landscape) {
+    .page-not-found, .go-to-our-site {
+        font-size: 8px;
+    }
+}
+
+/* Header Media Queries */
+
+@media screen and (max-width: 768px) {
+    .company-name h1  {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}
+@media screen and (max-width: 240px) and (orientation: portrait),
+        screen and (max-height: 240px) and (orientation: landscape) {
+    .company-name h1 {
+        font-size: 1em;
+        line-height: 3em;
+    }
+}
+
+/* Page Not Found Media Queries */
+
+@media screen and (min-width: 600px) and (min-height: 600px) {
+    #page-not-found  {
+        height: calc(100vh - 110px);
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 768px) {
+    #page-not-found  {
+        height: calc(100vh - 130px);
+    }
+}
+
+@media screen and (max-width: 240px) and (orientation: portrait),
+        screen and (max-height: 240px) and (orientation: landscape) {
+    #page-not-found  {
+        height: calc(100vh - 90px);
+    }
+}
+
+/* Page Not Found Orientation */
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .page-not-found-portrait { 
+        display: none;
+    }
+    .page-not-found-landscape {
+        display: block;
+    }
+}
+
+/* Footer Media Queries */
+
+@media screen and (min-width: 768px) and (min-height: 768px) {
+    footer {
+        font-size: 16px;
+        line-height: 2em;
+    } 
+}
+@media screen and (max-width: 480px) and (orientation: portrait),
+        screen and (max-height: 480px) and (orientation: landscape) {
+    footer {
+        font-size: 10px;
+        line-height: 2em;
+    } 
+} 
+@media screen and (max-width: 240px) and (orientation: portrait),
+        screen and (max-height: 240px) and (orientation: landscape) {
+    footer {
+        font-size: 8px;
+        line-height: 2em;
+    } 
+} 
+
+/* Screen Too Small Media Queries */
+
+@media screen and (max-width: 240px) and (orientation: portrait) {
+    body, header, main, footer {
+        width: 240px;
+    }
+}
+@media screen and (max-height: 320px) and (orientation: portrait) {
+    #page-not-found {
+        height: 230px;
+    }
+}
+@media screen and (max-width: 320px) and (orientation: landscape) {
+    body, header, main, footer {
+        width: 320px;
+    }
+}
+@media screen and (max-height: 240px) and (orientation: landscape) {
+    #page-not-found {
+        height: 150px;
+    }
+}
+
+/* End Of Media Queries */
+
+/* SVG Inline Sprite */
+
+.svg-inline-sprite {
+    visibility: hidden; 
+    position: absolute; 
+    z-index: -1;
+}
+
+/* NoShow & Reveal Stuff */
+
+.noshow {
+    opacity: 0;
+}
+.reveal {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}

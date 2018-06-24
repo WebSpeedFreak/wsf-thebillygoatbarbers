@@ -1,0 +1,946 @@
+/* 24/06/18 - Version 2.0 */
+
+html, body, section {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #333333;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #1c1c1c;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+} 
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+h1:hover, p:hover, ul:hover, li:hover {
+    cursor: default;
+}
+
+/* Header */
+
+header .logo {
+    font-size: 24px;
+    height: 2em;
+    width: 2em;
+}
+
+/* Social Media */
+.socialmedia {
+    font-size: 24px;
+    text-align: center;
+}
+.socialmedia ul {
+    line-height: 0;
+}
+.socialmedia li {
+    height: 2em;
+    width: 2em; 
+}
+.socialmedia li:hover {
+    cursor: pointer;
+}
+.socialmedia svg .icon-circle {
+    fill: transparent; 
+    stroke: #676767;
+    stroke-width: 2;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; 
+}
+.socialmedia svg:hover .icon-circle {
+    fill: #ffffff;
+    stroke: #979797;
+}
+.socialmedia svg .icon-sm {
+    fill: #ffffff;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; 
+}
+.socialmedia svg:hover .icon-sm {
+    fill: #373737;
+}
+
+/* CSS flexbox - Justify icons evenly*/
+.socialmedia ul {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+.socialmedia li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+}
+
+/* Telephone */
+
+.telephone {
+    color: #c5d8cc;
+    font-family: Kameron, Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding-top: 1em;
+    text-align: center;
+}
+.telephone p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+
+.navbar-default {
+    background-color: #1c1c1c;
+    height: 90px;
+    min-height: 90px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-fixed-top {
+    border-width: 0;
+}
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+}
+.nav-top-row {
+    height: 100%;
+    padding: 0.25em 0 0.5em 0;
+}
+.nav {
+    background-color: #1c1c1c;
+    font-size: 16px;
+    line-height: 1em;
+    text-align: center;
+}
+.nav li {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1em;
+}
+.nav a {
+    color: #e7e7e7;
+    font-family: Kameron, Arial;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 0 0.5em;
+}
+.nav a:hover {
+    background-color: #e7e7e7;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+main {
+    background-color: #333333;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Mitigate Blank Sections For Slower Connections */
+
+.loading {
+    background: url(/img/logo-white-50w.png) center center no-repeat;
+}
+
+/*  Home - Banner Image & Banner Overlay  */
+
+/* Home Section Is Full Height (Minus Height Of Header) For All Devices */
+#home {
+    padding: 0;
+    height: 100%;
+    height: calc(100vh - 90px);
+}
+
+/* Push Banner Below Header */
+.above-the-fold {
+    margin-top: 90px;
+}
+
+/* Banner Image */
+
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width : 100%;
+}
+
+.banner-default {
+    background-image: url(/img/v2/banner-03-cropped-1024w.jpg);
+    background-position: center bottom;
+}
+
+/* Tweak Position For Different Portraits - This Is VERY MESSY */
+@media screen and  (max-width: 1024px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -180px bottom;
+    }
+}
+@media screen and  (max-width: 768px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -140px bottom;
+    }
+}
+@media screen and  (max-width: 600px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -100px bottom;
+    }
+}
+@media screen and  (max-width: 600px) and (min-height: 900px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -120px bottom;
+    }
+}
+@media screen and  (max-width: 480px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -80px bottom;
+    }
+}
+@media screen and  (max-width: 480px) and (min-height: 800px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -120px bottom;
+    }
+}
+@media screen and  (max-width: 420px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -90px bottom;
+    }
+}
+@media screen and  (max-width: 320px) and (orientation: portrait) {
+    .banner-default {
+        background-position: left -70px bottom;
+    }
+}
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .banner-default {
+        background-position: center center;
+    }
+}
+
+/* Banner Overlay */
+
+.banner-overlay-wrapper {
+    -webkit-transform: translate(0, -115%);
+    -moz-transform: translate(0, -115%);
+    -ms-transform: translate(0, -115%);
+    -o-transform: translate(0, -115%);
+    transform: translate(0, -115%); 
+    z-index: 999;
+} 
+
+.banner-overlay {
+    font-family: Quicksand, Arial;
+    font-size: 12px;
+    font-weight: 400;
+    width: 240px;
+    height: 214px;
+    background: transparent;
+    margin: 0 auto; 
+}
+
+.banner-overlay .logo {
+    background-image: url(/img/banner-logo-white-480w.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 240px 214px; 
+    width: 240px;
+    height: 214px;
+}
+
+.banner-overlay .philosophy {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1em;
+    line-height: 1.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+    opacity: 0.7;
+}
+
+.banner-overlay .philosophy h1,
+.banner-overlay .philosophy p
+{
+    margin: 0;
+    padding: 0.25em;
+}
+
+.banner-overlay .philosophy h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Banner Overlay - Responsive */
+
+@media screen and (min-width: 600px) and (min-height: 600px) {
+    .banner-overlay {
+        font-size: 16px; 
+        width: 320px;
+        height: 285px;
+    }
+    .banner-overlay .logo {
+        background-size: 320px 285px;
+        width: 320px;
+        height: 285px;
+    }
+    .banner-overlay .philosophy {
+        width: 320px;
+        height: 285px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 1024px) {
+    .banner-overlay {
+        font-size: 24px; 
+        width: 480px;
+        height: 428px;
+    }
+    .banner-overlay .logo {
+        background-size: 480px 428px;
+        width: 480px;
+        height: 428px;
+    }
+    .banner-overlay .philosophy {
+        width: 480px;
+        height: 428px;
+    }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    .banner-overlay {
+        font-size: 8px; 
+        width: 160px; 
+        height: 143px;
+    }
+    .banner-overlay .logo {
+        background-size: 160px 143px;
+        width: 160px; 
+        height: 143px;
+    } 
+    .banner-overlay .philosophy {
+        width: 160px; 
+        height: 143px;
+    }
+}
+
+@media screen and (max-height: 240px) and (orientation: landscape) {
+    .banner-overlay-wrapper {
+        -webkit-transform: translate(0, -150px ); 
+        -moz-transform: translate(0, -150px ); 
+        -ms-transform: translate(0, -150px ); 
+        -o-transform: translate(0, -150px ); 
+        transform: translate(0, -150px ); 
+        z-index: 999;
+    } 
+}
+
+/* Banner Overlay - Bootstrap Carousel */
+
+.carousel-fade .carousel-inner > .item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 0;
+
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -ms-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.carousel-fade .carousel-inner > .item:first-of-type {
+  position: relative;
+}
+.carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Prices */
+
+#prices {
+    background-color: #f0f0f0; 
+    color: #333333;
+    -webkit-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -moz-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -ms-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    -o-box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    font-family: Quicksand, Arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 2em 0;
+}
+
+.prices-portrait .logo {
+    padding-bottom: 1em;
+}
+.prices-landscape .logo {
+    padding-bottom: 1em;
+}
+
+.prices h1 {
+    font-family: Kameron, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+}
+
+.prices ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.prices ul li {
+    display : inline;
+    font-weight: 700;
+    line-height: 2em;
+}
+
+.prices ul span  {
+    display : block;
+    margin-left: 1.5em;
+    text-align: left;
+}
+.prices ul span svg {
+    fill: #FFC370;
+    height: 1em;
+    width: 1em;
+    margin: 0 0.5em 0 -1.5em;
+} 
+
+/* Booksy */
+
+.booksy-widget-container {
+    font-family: Quicksand, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 2em;
+    padding: 1em 0 0 0;
+    text-align: center;
+}
+
+.booksy-widget-button {
+    background-color: #26cbc5;
+    color: #333333;
+    border: 2px #a9a9a9 solid;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+
+.booksy-widget-button:hover {
+    background-color: #00cc00;
+}
+
+/* Opening Hours */
+
+#hours {
+    background-color: #313233;
+    color: #cccccc; 
+    font-family: Quicksand, Arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 2em 0;
+}
+
+.hours-portrait .logo {
+    padding-bottom: 1em;
+}
+.hours-landscape .logo {
+    padding-bottom: 1em;
+}
+
+.hours h1 {
+    font-family: Kameron, Arial;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+}
+
+.hours ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.hours ul li {
+    line-height: 2em;
+}
+
+.walk-ins hr {
+    margin: 1em 2em;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.walk-ins p {
+    line-height: 2em;
+}
+
+/* Footer */
+
+footer {
+    background-color: #222222;
+    color: #e7e7e7;
+    font-family: Quicksand, Arial;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2em;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Header */
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    .navbar-default {
+        height: 70px;
+        min-height: 70px;
+    }
+}
+@media screen and (max-width: 240px) and (orientation: portrait),
+        screen and (max-height: 240px) and (orientation: landscape) {
+    .navbar-default {
+        height: 70px;
+        min-height: 70px;
+    }
+}
+
+/* Header Logo */
+
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    header .logo {
+        font-size: 16px;
+    }
+}
+
+/* Social Media */
+
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    .socialmedia li {
+        font-size: 16px;
+    }
+}
+
+/* Social Media - Padding For Icons - To Keep Them Close Together */
+
+@media screen and (min-width: 481px) {
+    .socialmedia {
+        padding: 0 3em;
+    } 
+}
+
+@media screen and (min-width: 768px) {
+    .socialmedia {
+        padding: 0 4em;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    .socialmedia {
+        padding: 0 5em;
+    } 
+}
+
+/* Telephone */
+
+@media screen and (max-width: 768px) {
+    .nav-top-row .col-xxs-3.no-left-padding  {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    .telephone {
+        font-size: 12px;
+        padding-top: 1.5em;
+    } 
+} 
+
+@media screen and (max-width: 480px) {
+    .telephone {
+        font-size: 10px;
+        padding-top: 2em;
+    } 
+} 
+
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    .telephone {
+        font-size: 8px;
+        padding-top: 1.5em;
+    }
+} 
+
+/* Navigation */
+
+@media screen and (min-width: 1024px) and (min-height: 1024px)  {
+    .nav-top-row {
+            padding: 0.25em 0 0.5em 0;
+        }
+    .nav {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait),
+    screen and (max-height: 480px) and (orientation: landscape) {
+    .nav-top-row {
+        padding: 0.25em 0 0.75em 0;
+    }
+    .nav {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 320px) and (orientation: portrait),
+    screen and (max-height: 320px) and (orientation: landscape) {
+    .nav-top-row {
+        padding: 0.25em 0 0.75em 0;
+    }
+    .nav {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 240px) and (orientation: portrait),
+    screen and (max-height: 240px) and (orientation: landscape) {
+    .nav-top-row {
+        padding: 0.25em 0 0.75em 0;
+    }
+    .nav {
+        font-size: 10px;
+    }
+}
+
+/* Home - Above The Fold - Banner */
+/* Home Section Is Full Height (Minus Height Of Header) */
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    #home {
+        padding: 0;
+        height: 100%;
+        height: calc(100vh - 70px);
+    }
+    .above-the-fold {
+        margin-top: 70px;
+    }
+}
+
+/* Prices */
+/* Prices Section Is Full Height (Minus Height Of Header) */
+@media screen and (max-width: 480px) and (orientation: portrait),
+        screen and (max-height: 480px) and (orientation: landscape) {
+    #prices {
+        padding: 0;
+        height: 100%;
+        height: calc(100vh - 90px);
+    }
+}
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    #prices {
+        padding: 0;
+        height: 100%;
+        height: calc(100vh - 70px);
+    }
+}
+
+/* Hours */
+/* Hours Section Is Full Height (Minus Height Of Header & Height Of Footer) */
+@media screen and (max-width: 480px) and (orientation: portrait),
+        screen and (max-height: 480px) and (orientation: landscape) {
+    #hours {
+        padding: 0;
+        height: 100%;
+        height: calc(100vh - 140px);
+    }
+}
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    #hours {
+        padding: 0;
+        height: 100%;
+        height: calc(100vh - 110px);
+    }
+}
+
+/* Walk-ins Divider */
+
+@media screen and (max-width: 480px) and (orientation: portrait)
+ {
+    .walk-ins hr {
+        margin: 1em 3em;
+    }
+}
+@media screen and (max-height: 480px) and (orientation: landscape)
+ {
+    .walk-ins hr {
+        margin: 1em 1em;
+    }
+}
+
+/* Prices & Hours Layout */
+
+@media screen and (min-width: 481px) {
+    .prices-portrait .logo, .prices-portrait .booksy,
+    .hours-portrait .logo, .hours-portrait .walk-ins {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .prices-portrait.col-xxs-7, .hours-portrait.col-xxs-7 {
+        width: 100%;
+    }
+    .prices-landscape, .hours-landscape {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) and (orientation: landscape) {
+    .prices-portrait .logo, .prices-portrait .booksy,
+    .hours-portrait .logo, .hours-portrait .walk-ins {
+        display: none;
+    }
+}
+
+/* Vertical Centre */
+
+@media screen and (max-width: 480px) and (orientation: portrait),
+        screen and (max-height: 480px) and (orientation: landscape) {
+    .vertical-centre {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+/* Responsive Font Sizes */
+
+@media screen and (min-width: 1024px) and (min-height: 1024px) {
+    .prices, .booksy, .hours, .walk-ins {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .prices, .booksy, .hours, .walk-ins {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) and (orientation: portrait),
+        screen and (max-height: 375px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 240px) and (orientation: portrait),
+        screen and (max-height: 240px) and (orientation: landscape) {
+    .prices, .booksy, .hours, .walk-ins {
+        font-size: 8px;
+    }
+    .prices-portrait .logo, .prices-landscape .logo,
+    .hours-portrait .logo, .hours-landscape .logo {
+        padding-bottom: 0.5em;
+    }
+}
+
+/* Footer Media Queries */
+
+@media screen and (min-width: 768px) and (min-height: 768px) {
+    footer {
+        font-size: 16px;
+        line-height: 2em;
+    } 
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait),
+        screen and (max-height: 480px) and (orientation: landscape) {
+    footer {
+        font-size: 10px;
+        line-height: 2em;
+    } 
+} 
+@media screen and (max-width: 320px) and (orientation: portrait),
+        screen and (max-height: 320px) and (orientation: landscape) {
+    footer {
+        font-size: 8px;
+        line-height: 2em;
+    } 
+} 
+
+/* Screen Too Small Media Queries */
+
+@media screen and (max-width: 240px) and (orientation: portrait) {
+    body, header .navbar, main, footer {
+        width: 240px;
+    }
+    .navbar-fixed-top {
+        width: 240px;
+        left: auto;
+        right: auto;
+    }
+}
+@media screen and (max-height: 320px) and (orientation: portrait) {
+    #home {
+        height: 250px;
+    }
+    #prices {
+        height: 250px;
+    }
+    #hours {
+        height: 210px;
+    }
+}
+@media screen and (max-width: 320px) and (orientation: landscape) {
+    body, header .navbar, main, footer {
+        width: 320px;
+    }
+    .navbar-fixed-top {
+        width: 320px;
+        left: auto;
+        right: auto;
+    }
+}
+@media screen and (max-height: 240px) and (orientation: landscape) {
+    #home {
+        height: 170px;
+    }
+    #prices {
+        height: 170px;
+    }
+    #hours {
+        height: 130px;
+    }
+}
+
+/* End Of Media Queries */
+
+/* SVG Inline Sprite */
+
+.svg-inline-sprite {
+    visibility: hidden; 
+    position: absolute; 
+    z-index: -1;
+}
+
+/* Hide & Reveal Stuff */
+
+.noshow {
+    opacity: 0;
+}
+.reveal {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}

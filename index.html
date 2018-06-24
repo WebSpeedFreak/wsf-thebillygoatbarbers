@@ -5,6 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://booksy.com" />
+
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://booksy.com" />
+
+    <title>The Billy Goat Barbers</title>
+
     <meta name="description" content="The Billy Goat Barbers in Stockton Heath, Warrington. Offering men&#039;s styling, wet shaves, beard trims &amp; more! Call us on 01925 871269 or pop in and see us!"/>
     <link rel="canonical" href="https://www.thebillygoatbarbers.co.uk/" />
     <link rel="shortlink" href="https://www.thebillygoatbarbers.co.uk/" />
@@ -24,22 +36,7 @@
     <meta name="twitter:title" content="The Billy Goat Barbers - Stockton Heath" />
     <meta name="twitter:image" content="https://www.thebillygoatbarbers.co.uk/img/logo-black-50w.png" />
     
-    <title>The Billy Goat Barbers</title>
-
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://booksy.com" />
-
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="https://booksy.com" />
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
-
     <!-- External Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kameron:700|Quicksand:400,700" /> 
 
     <!-- External Styles -->
@@ -48,75 +45,118 @@
     <!-- Internal Styles -->
     <link rel="stylesheet" href="/css/bootstrap/bootstrap-grid-xxs.min.css" />
     <link rel="stylesheet" href="/css/booksy/widget.min.css" />
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/v2/app.css" />
 </head>
 <body>
 
     <!-- Early Load Background Images -->
     <div class="container hide">
         <div class="row">
-            <img src="/img/andywardlephoto-0101-1200w.jpg" />
-            <img src="/img/banner-logo-white-480w.png" />
+            <img class="default-banner" src="/img/v2/banner-03-cropped-1024w.jpg" title="The Billy Goat Barbers"/>
+            <img src="/img/banner-logo-white-480w.png" title="The Billy Goat Barbers"/>
         </div>
     </div>
+
+    <!-- SVG Inline Sprite To Replace FontAwsesome -->
+    <svg class="svg-inline-sprite">
+        <defs>
+            <symbol id="circle" width="48" height="48" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="23"/>
+            </symbol>
+            <symbol id="fb" width="1792" height="1792" viewBox="0 0 1792 1792">
+                <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/>
+            </symbol>
+            <symbol id="tw" width="1792" height="1792" viewBox="0 0 1792 1792">
+                <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/>
+            </symbol>
+            <symbol id="in" width="1792" height="1792" viewBox="0 0 1792 1792">
+                <path d="M1490 1426v-648h-135q20 63 20 131 0 126-64 232.5t-174 168.5-240 62q-197 0-337-135.5t-140-327.5q0-68 20-131h-141v648q0 26 17.5 43.5t43.5 17.5h1069q25 0 43-17.5t18-43.5zm-284-533q0-124-90.5-211.5t-218.5-87.5q-127 0-217.5 87.5t-90.5 211.5 90.5 211.5 217.5 87.5q128 0 218.5-87.5t90.5-211.5zm284-360v-165q0-28-20-48.5t-49-20.5h-174q-29 0-49 20.5t-20 48.5v165q0 29 20 49t49 20h174q29 0 49-20t20-49zm174-208v1142q0 81-58 139t-139 58h-1142q-81 0-139-58t-58-139v-1142q0-81 58-139t139-58h1142q81 0 139 58t58 139z"/>
+            </symbol>
+            <symbol id="ar" width="1792" height="1792" viewBox="0 0 1792 1792">
+                <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293h-704q-52 0-84.5-37.5t-32.5-90.5v-128q0-53 32.5-90.5t84.5-37.5h704l-293-294q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
+            </symbol>
+        </defs>
+    </svg>
 
     <header>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="row nav-top-row">
-                    <div class="col-md-2 col-sm-2 col-xs-2 col-xxs-2"> 
-                        <div class="logo">
-                            <a href="/"><img src="/img/logo-white-50w.png" alt="White Billy Goat Logo" height="50" width="50" /></a>
+                    <div class="">
+                        <div class="col-md-2 col-sm-2 col-xs-2 col-xxs-3"> 
+                            <div class="logo">
+                                <a href="/"><img src="/img/logo-white-50w.png" alt="White Billy Goat Logo" title="The Billy Goat Barbers" height="auto" width="100%" /></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-7">
-                        <div class="socialmedia">
-                            <ul>
-                                <li><a class="fa fa-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/TheBillyGoatBarbers/" title="Follow Us On Facebook"></a></li>
-                                <li><a class="fa fa-twitter" target="_blank" rel="noopener" href="https://twitter.com/barbersgoat/" title="Follow Us On Twitter"></a></li>
-                                <li><a class="fa fa-instagram" target="_blank" rel="noopener" href="https://instagram.com/thebillygoatbarbers/" title="Follow Us On Instagram"></a></li>
-                            </ul>
+                        <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-6">
+                            <div class="socialmedia">
+                                <ul>
+                                    <li title="Follow Us On Facebook">
+                                        <svg height="2em" width="2em">
+                                            <a target="_blank" rel="noopener" xlink:href="https://www.facebook.com/TheBillyGoatBarbers/" title="Follow Us On Facebook">
+                                                <svg class="icon-circle">
+                                                    <use xlink:href="#circle" height="2em" width="2em"></use>
+                                                </svg>
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="#fb" x="0.5em" y="0.5em" height="1em" width="1em"></use>
+                                                </svg>
+                                            </a>
+                                        </svg>
+                                    </li>
+                                    <li title="Follow Us On Twitter">
+                                        <svg height="2em" width="2em">
+                                            <a target="_blank" rel="noopener" xlink:href="https://twitter.com/barbersgoat/" title="Follow Us On Twitter">
+                                                <svg class="icon-circle">
+                                                    <use xlink:href="#circle" height="2em" width="2em"></use>
+                                                </svg>
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="#tw" x="0.5em" y="0.5em" height="1em" width="1em"></use>
+                                                </svg>
+                                            </a>
+                                        </svg>
+                                    </li>
+                                    <li title="Follow Us On Instagram">
+                                        <svg height="2em" width="2em">
+                                            <a target="_blank" rel="noopener" xlink:href="https://instagram.com/thebillygoatbarbers/" title="Follow Us On Instagram">
+                                                <svg class="icon-circle">
+                                                    <use xlink:href="#circle" height="2em" width="2em"></use>
+                                                </svg>
+                                                <svg class="icon-sm">
+                                                    <use xlink:href="#in" x="0.5em" y="0.5em" height="1em" width="1em"></use>
+                                                </svg>
+                                            </a>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div> 
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-2 col-xxs-3 full-width">
-                        <div class="telephone" title="Call Us And Make An Appointment">
-                            <p title="Call Us On 01925871269">01925871269</p>
+                        <div class="col-md-2 col-sm-2 col-xs-2 col-xxs-3 no-left-padding">
+                            <div class="telephone" title="Call Us And Make An Appointment">
+                                <p title="Call Us On 01925871269">01925871269</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                        <div class="col-xs-12">
-                            <div class="nav">
-                                <ul>
-                                    <li><a href="#home" title="Home">HOME</a></li>
-                                    <li><a href="#prices" title="Prices">PRICES</a></li>
-                                    <li><a href="#hours" title="Opening Times">OPENING TIMES</a></li>
-                                </ul>
-                            </div>
+                    <div class="col-xxs-12">
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#home" title="Home">HOME</a></li>
+                                <li><a href="#prices" title="Prices">PRICES</a></li>
+                                <li><a href="#hours" title="Opening Times">OPENING TIMES</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <!-- Offset For Sticky Header -->
-        <div class="container">
-            <div class="row">
-                <div class="header-height"></div>
-            </div>
-        </div>
     </header>
+
     <main>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="loading-background">
-                        <img src="/img/logo-white-50w.png" alt="White Billy Goat Logo" height="50" width="50" />
-                    </div>
-                </div>
+        <section id="home" class="loading" >
+            <div class="above-the-fold banner banner-default noshow">
             </div>
-        </section>
-        <section id="home" class="above-the-fold noshow">
-            <div class="banner-overlay-wrapper">
+            <div class="banner-overlay-wrapper noshow">
                 <div class="container">
                     <div class="row">
                         <div class="banner-overlay">
@@ -138,27 +178,27 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                
+                        </div> 
                     </div>
                 </div>
-            </div>  
+            </div>
         </section>
-        <section id="prices" class="noshow">
-            <div class="container vertical-centre">
+        <section id="prices" class="loading">
+            <div class="container vertical-centre noshow">
                 <div class="row">
-                    <div class="prices-portrait col-xs-7 col-xxs-12">
+                    <div class="prices-portrait col-md-6 col-sm-6 col-xs-7 col-xxs-7">
                         <div class="logo">
-                            <img src="/img/logo-black-50w.png" alt="Black Billy Goat Logo" height="50" width="50" />
+                            <img src="/img/logo-black-50w.png" alt="Black Billy Goat Logo" title="The Billy Goat Barbers" height="50px" width="50px" />
                         </div>
                         <div class="prices">
                             <h1 title="Trims and Shaves">TRIMS & SHAVES</h1>
-                            <ul>
-                                <li title="Wash And Cut">Wash, Cut &amp; Finish £20</li>
-                                <li title="Children's Cut">Children&#8217;s Cut &amp; Finish (3-11 yrs) £16</li>
-                                <li title="Senior Wash">Senior Wash, Cut &amp; Finish £16</li>
-                                <li title="Beard Trims">Beard Trims £7 &#8211; £12</li>
-                                <li title="Hot Towel Shave">Hot Towel Shave (45 mins) £16</li>
-                                <li title="Grey Blending">Grey Blending £12</li>
+                            <ul title="Trims and Shaves">
+                                <span title="Wash And Cut"><svg class="ari"><use xlink:href="#ar" height="1.125em" width="1em"></use></svg><li title="Wash And Cut">Wash, Cut &amp; Finish £20</li></span>
+                                <span title="Children's Cut"><svg class="ari"><use xlink:href="#ar" height="1.125em" width="1em"></use></svg><li title="Children's Cut">Children&#8217;s Cut &amp; Finish (3-11 yrs) £16</li></span>
+                                <span title="Senior Wash"><svg class="ari"><use xlink:href="#ar" height="1.125em" width="1em"></use></svg><li title="Senior Wash">Senior Wash, Cut &amp; Finish £16</li></span>
+                                <span title="Beard Trims"><svg class="ari"><use xlink:href="#ar" height="1.125em" width="1em"></use></svg><li title="Beard Trims">Beard Trims £7 &#8211; £12</li></span>
+                                <span title="Hot Towel Shave"><svg class="ari"><use xlink:href="#ar" height="1.125em" width="1em"></use></svg><li title="Hot Towel Shave">Hot Towel Shave (45 mins) £16</li></span>
+                                <span title="Grey Blending"><svg class="ari"><use xlink:href="#ar" height="1.125em" width="1em"></use></svg><li title="Grey Blending">Grey Blending £12</li></span>
                             </ul>
                         </div>
                         <div class="booksy">
@@ -167,9 +207,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="prices-landscape col-xs-5 hidden-xxs">
+                    <div class="prices-landscape col-md-6 col-sm-6 col-xs-5 col-xxs-5">
                         <div class="logo">
-                            <img src="/img/logo-black-50w.png" alt="Black Billy Goat Logo" height="50" width="50" />
+                            <img src="/img/logo-black-50w.png" alt="Black Billy Goat Logo" title="The Billy Goat Barbers" height="50px" width="50px" />
                         </div>
                         <div class="booksy">
                             <div class="booksy-widget-container">
@@ -180,16 +220,16 @@
                 </div>
             </div>
         </section>
-        <section id="hours" class="noshow">
-            <div class="container vertical-centre">
+        <section id="hours" class="loading">
+            <div class="container vertical-centre noshow">
                 <div class="row">
-                    <div class="hours-portrait col-xs-7 col-xxs-12">
+                    <div class="hours-portrait col-md-6 col-sm-6 col-xs-7 col-xxs-7">
                         <div class="logo">
-                            <img src="/img/logo-white-50w.png" alt="Black Billy Goat Logo" height="50" width="50" />
+                            <img src="/img/logo-white-50w.png" alt="Black Billy Goat Logo" title="The Billy Goat Barbers" height="50px" width="50px" />
                         </div>
                         <div class="hours">
                             <h1 title="Opening Hours">OPENING HOURS</h1>
-                            <ul>
+                            <ul title="Opening Hours">
                                 <li>Mon to Wed &#8211; 9am-6:30pm</li>
                                 <li>Thursday &#8211; 9am-8pm</li>
                                 <li>Friday &#8211; 9am-6:30pm</li>
@@ -202,9 +242,9 @@
                             <p title="Walk-ins and Bookings Available">Walk-ins &amp; Bookings Available</p>
                         </div>
                     </div>
-                    <div class="hours-landscape col-xs-5 hidden-xxs">
+                    <div class="hours-landscape col-md-6 col-sm-6 col-xs-5 col-xxs-5">
                         <div class="logo">
-                            <img src="/img/logo-white-50w.png" alt="Black Billy Goat Logo" height="50" width="50" />
+                            <img src="/img/logo-white-50w.png" alt="Black Billy Goat Logo" title="The Billy Goat Barbers" height="50px" width="50px" />
                         </div>
                         <div class="walk-ins">
                             <hr>
@@ -215,7 +255,8 @@
             </div>
         </section>
     </main>
-    <footer class="noshow">
+
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-xxs-12">
@@ -235,12 +276,12 @@
     </footer>
 
     <!-- External JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
 
     <!-- Internal JS -->
-    <script src="/js/booksy/code.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/booksy/code.min.js" defer></script>
+    <script src="/js/v2/app.js" defer></script>
 
 </body>
 
